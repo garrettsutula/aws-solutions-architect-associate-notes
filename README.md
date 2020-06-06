@@ -1,2 +1,28 @@
-# aws-solutions-architect-associate-notes
-Study Notes for AWS Solutions Architect Associate Certification
+# AWS Solutions Architect Associate Study Notes
+I put these notes together while studying for my AWS Solutions Architect Associate certification. The following topics are covered:
+
+- [Identity & Access Management (IAM)](iam.md)
+- [Simple Storage Service (S3)](s3.md)
+- [CloudFront](cloudfront.md)
+- [Web Application Firewall (WAF)](waf.md)
+- [Snowball](snowball.md)
+- [Storage Gateway](storage-gateway.md)
+- [Elastic Cloud Compute (EC2)](ec2.md)
+- [CloudWatch](cloudwatch.md)
+- [Elastic Block Storage (EBS)](ebs.md)
+- [Elastic File System (EFS)](efs.md)
+- [Amazon FSx](fsx.md)
+- [Elastic Load Balancer (ELB)](elb.md)
+- [Databases - Relational Data Store (RDS), DynamoDB and RedShift](databases.md)
+- [Route 53](route53.md)
+- [Autoscaling](autoscaling.md)
+- [High Availability Architecture](ha-architecture.md)
+- [CloudFormation](cloudformation.md)
+- [Elastic Beanstalk](beanstalk.md)
+- [Simple Queue Service (SQS)](sqs.md)
+- [Simple Workflow Service](swf.md)
+- [Simple Notification Service](sns.md)
+- [Elastic Transcoder](elastic-transcoder.md)
+- [API Gateway](api-gateway.md)
+- [Kinesis](kinesis.md)
+- [Identity Federation and Cognito](identity-federation.md)

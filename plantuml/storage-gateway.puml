@@ -1,0 +1,122 @@
+@startuml File Gateway
+left to right direction
+
+node "Application Server" as app
+boundary "Storage Gateway" as gateway
+node {
+  rectangle "Direct Connect" as dc
+  rectangle "Internet" as internet
+  rectangle "Amazon VPC" as vpc
+}
+cloud AWS {
+  frame "S3" {
+    file "S3" as s3
+    file "S3-IA" as s3ia
+    file "Glacier" as glacier
+  }
+
+
+  s3 -- s3ia
+  s3ia -- glacier
+}
+
+app -- gateway: NFS
+gateway -- dc
+gateway -- internet
+gateway -- vpc
+dc -- s3
+internet -- s3
+vpc -- s3
+
+@enduml
+
+@startuml Volume Gateway - Stored Volumes
+left to right direction
+actor "Users" as users
+node "Client" as client
+node "Application Server" as app
+node "Host" as host {
+  node "Hypervisor" {
+    storage "Volume Storage" as volume
+    storage "Upload Buffer" as buffer
+  }
+}
+storage "**Storage Appliance**\nStorage Area Network\nDirect Attached Storage\nNetwork Attached Storage" as storage
+cloud "AWS" {
+  frame "S3" {
+    file "Snapshot" as snapshot
+  }
+}
+
+users <-> client
+client <--> app
+app <--> host: ICSI
+host <--> storage
+volume <--> buffer
+buffer <--> snapshot
+
+@enduml
+
+@startuml Volume Gateway - Cache Volumes
+left to right direction
+actor "Users" as users
+node "Client" as client
+node "Application Server" as app
+node "Host" as host {
+  node "Hypervisor" {
+    storage "Volume Storage" as volume
+    storage "Upload Buffer" as buffer
+  }
+}
+storage "**Storage Appliance**\nStorage Area Network\nDirect Attached Storage\nNetwork Attached Storage" as storage
+cloud "AWS" {
+  frame "S3" {
+    storage "Volume Storage" as cloud_volume
+    file "Snapshot" as snapshot
+
+    cloud_volume -- snapshot
+  }
+}
+
+users <-> client
+client <--> app
+app <--> host: ICSI
+host <--> storage
+volume <--> buffer
+buffer <--> cloud_volume
+
+@enduml
+
+@startuml Tape Gateway
+left to right direction
+node "Application Server" as app
+node "Backup Appliance" as backup
+node "Host" as host {
+  node "Hypervisor" {
+    agent "Tape Drive" as tape
+    agent "Media Changer" as changer
+    storage "Volume Storage" as volume
+    storage "Upload Buffer" as buffer
+    tape <--> volume
+    changer <--> volume
+  }
+}
+storage "**Storage Appliance**\nStorage Area Network\nDirect Attached Storage\nNetwork Attached Storage" as storage
+cloud "AWS" {
+  frame "S3" {
+    storage "Virtual Tape" as s3_tape
+  }
+  frame "Glacier" {
+    storage "Virtual Tape" as glacier_tape
+  }
+}
+
+app <--> backup: ICSI
+backup <--> host: ICSI
+host <--> storage
+volume <--> buffer
+buffer <--> s3_tape
+s3_tape --> glacier_tape: Archiving
+glacier_tape --> s3_tape: Retrieving
+
+@enduml

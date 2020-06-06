@@ -1,0 +1,27 @@
+@startuml Event-driven Application
+actor "User" as user
+folder "S3 Bucket" as s3
+rectangle "Lambda: Process Image" as process_lambda
+rectangle "Lambda: Notify" as notify_lambda
+rectangle "Lambda: Store" as store_lambda
+
+user -> s3: Upload Image
+s3 -> process_lambda: Add Image Metadata
+process_lambda --> notify_lambda: Trigger Processing Notification
+notify_lambda -> user: Notify: Image Processed Successfully 
+process_lambda --> store_lambda: Store Processed Image in Archive
+store_lambda -> s3: Save Processed Image
+
+@enduml
+
+@startuml Request-driven Application
+actor "User" as user
+boundary "API Gateway" as gateway
+rectangle "Lambda: API Endpoint" as lambda
+
+user -> gateway: Make HTTP Request
+gateway -> lambda: Forward HTTP Request
+lambda .> gateway: HTTP Response
+gateway .> user: HTTP Response
+
+@enduml

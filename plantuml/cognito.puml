@@ -1,0 +1,19 @@
+@startuml Cognito Authentication
+actor "User" as user
+participant "User Pool" as user_pool
+participant "Identity Provider\n(Facebook, Google, etc.)" as identity_provider
+participant "Identity Pool" as identity_pool
+participant "AWS Resource\n(S3, etc.)" as aws
+
+user -> identity_provider ++: **Log In**\n { user, password }
+identity_provider --> user --: **Response**\n { provider_token }
+user -> user_pool ++: **Authenticate**\n { provider_token }
+user_pool -> identity_provider ++: **Validate Token**
+identity_provider --> user_pool --: **Response**
+user_pool --> user --: **Response**\n { user_pool_token }
+user -> identity_pool ++: **Exchange Token**\n { user_pool_token }
+identity_pool --> user --: **Response**\n { aws_token }
+user -> aws ++: **Do Stuff**
+aws --> user --:
+
+@enduml

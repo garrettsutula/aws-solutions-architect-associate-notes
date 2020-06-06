@@ -1,0 +1,29 @@
+@startuml Organizations
+rectangle "Root Account" as root
+node "Policy" as policy1
+node "Policy" as policy2
+node "Policy" as policy3
+package "OU" as ou1 {
+  rectangle "Account" as account1
+  package "OU" as ou2 {
+    rectangle "Account" as account2
+    rectangle "Account" as account3
+  }
+}
+package "OU" as ou3 {
+  rectangle "Account" as account4
+  rectangle "Account" as account5
+  package "OU" as ou4 {
+    rectangle "Account" as account6
+    rectangle "Account" as account7
+    rectangle "Account" as account8
+  }
+}
+root -- ou1
+root -- ou3
+policy1 ---> account1
+policy1 ---> ou3
+policy2 ---> ou1
+policy3 ---> ou2
+
+@enduml

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="252px" preserveAspectRatio="none" style="width:968px;height:252px;" version="1.1" viewBox="0 0 968 252" width="968px" zoomAndPan="magnify"><defs><filter height="300%" id="fgm7z62nkvl35" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><polygon fill="#FFFFFF" filter="url(#fgm7z62nkvl35)" points="405,34,415,24,551,24,551,230,541,240,405,240,405,34" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="541" x2="550" y1="34" y2="25"/><line style="stroke: #000000; stroke-width: 1.5;" x1="405" x2="541" y1="34" y2="34"/><line style="stroke: #000000; stroke-width: 1.5;" x1="541" x2="541" y1="34" y2="240"/><!--MD5=[88656e78e5bedad418341b6ececa151e]
+cluster AWS--><path d="M601.3322,44.6626 C609.1568,31.956 616.9278,33.0041 626.2756,42.9882 C631.6603,32.371 638.9188,31.7658 646.2671,41.012 C653.3008,28.2731 663.9689,24.9701 673.6369,38.2398 C678.5616,27.0099 688.4936,26.6021 694.3782,37.3331 C699.5989,24.5105 711.1767,23.7558 718.1159,35.685 C725.0147,24.413 735.7632,22.8217 743.1913,35.1221 C749.7545,22.3086 758.4656,22.692 767.0327,33.0612 C772.6578,23.7333 781.3948,22.8498 787.5897,32.4422 C795.0413,20.5265 806.5577,23.1695 811.6227,34.8709 C820.1917,21.5541 829.2227,24.1853 837.2677,35.4183 C846.9782,25.0961 854.7494,25.4864 860.2868,39.3845 C866.1575,29.2121 876.3101,28.7667 882.6374,38.8814 C891.5415,26.9673 900.9602,28.2291 907.1854,41.4932 C919.5852,30.264 927.9174,33.1961 934,48 C934.7102,47.5012 935.5653,47.6183 935.6803,48.6524 C950.8007,56.1509 952.7532,72.1251 937.9803,81.7039 C954.6225,87.9287 955.4205,102.8211 941.4634,112.506 C956.2509,125.3151 956.2474,136.4096 939.0787,147.0102 C952.1996,162.9427 947.4664,178.3399 927,183 C928.9486,182.5842 929.9509,183.6704 929.4267,185.5803 C922.5197,197.8565 913.4002,195.4753 906.8864,185.1874 C901.6966,196.3833 891.4054,198.5168 883.3932,188.2813 C874.6789,200.5405 867.0488,202.2486 857.9373,188.6725 C853.1634,200.4488 845.5802,202.1122 837.3348,191.9296 C831.4504,205.7695 818.6931,206.3648 810.5325,194.2831 C805.0533,206.5046 796.132,205.6059 788.4577,196.5617 C783.7056,205.855 773.2631,208.6829 767.0428,198.1474 C757.0476,208.1805 745.9327,207.7446 739.6016,193.9311 C731.6218,202.8778 723.6821,202.8865 717.5384,191.8989 C710.7571,202.1533 702.7468,203.9459 694.3383,193.7444 C685.3937,205.5399 674.4811,202.339 669.625,189.6224 C663.0683,200.33 652.519,199.2472 646.6115,188.9124 C638.9219,197.903 631.0446,197.9021 625.8088,186.4192 C611.8824,201.1471 595.5686,194.8817 592,176 C593.4542,176.1971 593.9211,176.9237 593.4227,178.3188 C577.8198,168.8436 575.247,156.3414 591.1731,144.7532 C575.4229,137.2824 577.5118,122.9041 590.2653,114.5758 C575.5094,103.4336 576.8316,88.4443 595.3266,82.5583 C574.9043,66.2404 575.9521,53.4754 599,41 C601.5996,40.6768 602.5082,42.5817 601.3322,44.6626 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="31" x="747.5" y="60.5332">AWS</text><!--MD5=[addf083e429417be7ad7bace6a60d70a]
+cluster S3--><rect fill="#FFFFFF" filter="url(#fgm7z62nkvl35)" height="90" style="stroke: #000000; stroke-width: 1.5;" width="310" x="608" y="77"/><path d="M635,78 L635,87.6094 L625,97.6094 L608,97.6094 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="17" x="611" y="92.5332">S3</text><!--MD5=[226fc8af728df80cb2ddb40b34b22fc1]
+entity dc--><rect fill="#FEFECE" filter="url(#fgm7z62nkvl35)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="114" x="421" y="40"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="431" y="64.5332">Direct Connect</text><!--MD5=[53a7890647be042c111b8a807eed420f]
+entity internet--><rect fill="#FEFECE" filter="url(#fgm7z62nkvl35)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="68" x="444" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="454" y="137.5332">Internet</text><!--MD5=[0285e70227d2ef6b2dbc04633fe8170d]
+entity vpc--><rect fill="#FEFECE" filter="url(#fgm7z62nkvl35)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="102" x="427" y="186"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="437" y="210.5332">Amazon VPC</text><!--MD5=[b165ca7cce796f881c879adda4a6bef9]
+entity s3--><polygon fill="#FEFECE" filter="url(#fgm7z62nkvl35)" points="624,113,624,150.6094,661,150.6094,661,123,651,113,624,113" style="stroke: #000000; stroke-width: 1.5;"/><path d="M651,113 L651,123 L661,123 " fill="#FEFECE" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="634" y="137.5332">S3</text><!--MD5=[1b7220f8669d629c2664e397a06d9154]
+entity s3ia--><polygon fill="#FEFECE" filter="url(#fgm7z62nkvl35)" points="722,113,722,150.6094,776,150.6094,776,123,766,113,722,113" style="stroke: #000000; stroke-width: 1.5;"/><path d="M766,113 L766,123 L776,123 " fill="#FEFECE" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="34" x="732" y="137.5332">S3-IA</text><!--MD5=[745dc94e5b47e5078b95165a6b07de51]
+entity glacier--><polygon fill="#FEFECE" filter="url(#fgm7z62nkvl35)" points="837,113,837,150.6094,902,150.6094,902,123,892,113,837,113" style="stroke: #000000; stroke-width: 1.5;"/><path d="M892,113 L892,123 L902,123 " fill="#FEFECE" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="847" y="137.5332">Glacier</text><!--MD5=[4541fb81c80c07473fe4b07432ef0971]
+entity app--><polygon fill="#FEFECE" filter="url(#fgm7z62nkvl35)" points="6,118,16,108,161,108,161,145.6094,151,155.6094,6,155.6094,6,118" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="151" x2="160" y1="118" y2="109"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="151" y1="118" y2="118"/><line style="stroke: #000000; stroke-width: 1.5;" x1="151" x2="151" y1="118" y2="155.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="115" x="21" y="142.5332">Application Server</text><!--MD5=[7b30460008fc71f9986330c33ee2d290]
+entity gateway--><path d="M283,111 L283,135 M283,123 L300,123 " fill="none" filter="url(#fgm7z62nkvl35)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="312" cy="123" fill="#FEFECE" filter="url(#fgm7z62nkvl35)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="249" y="153.5332">Storage Gateway</text><!--MD5=[34e06c63f8d1fb65cb84ae3a30f5ca56]
+link s3 to s3ia--><path d="M661.227,132 C677.881,132 703.005,132 721.94,132 " fill="none" id="s3-s3ia" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[32d88bd0f6563ca463a5d8eea0dfab03]
+link s3ia to glacier--><path d="M776.005,132 C793.855,132 817.657,132 836.646,132 " fill="none" id="s3ia-glacier" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a62c66f251ce50c581af599d4331f162]
+link app to gateway--><path d="M161.052,132 C190.006,132 222.32,132 248.746,132 " fill="none" id="app-gateway" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="26" x="192" y="128.4951">NFS</text><!--MD5=[03b71b69dc2ad42e6b10a846cc530d98]
+link gateway to dc--><path d="M358.135,109.303 C381.871,99.258 409.472,87.577 432.1,78.001 " fill="none" id="gateway-dc" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[beb3f74a8ec0003e65ab26482d547b33]
+link gateway to internet--><path d="M358.135,132 C386.223,132 419.723,132 443.989,132 " fill="none" id="gateway-internet" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5dfe4e2487ee5430991cf98dce94d6c6]
+link gateway to vpc--><path d="M358.135,154.697 C381.871,164.7425 409.472,176.4231 432.1,185.9988 " fill="none" id="gateway-vpc" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5f9f1c9240e5a7d70ce54996ba7985eb]
+link dc to s3--><path d="M521.695,78.18 C554.983,93.134 599.512,113.138 623.825,124.06 " fill="none" id="dc-s3" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b1dca995c086aa9dbca3fbfc5a9abb37]
+link internet to s3--><path d="M512.276,132 C546.075,132 597.13,132 623.822,132 " fill="none" id="internet-s3" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[04f4269667d27a369687ef25eb5c5c09]
+link vpc to s3--><path d="M521.695,185.8201 C554.983,170.8659 599.512,150.862 623.825,139.94 " fill="none" id="vpc-s3" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c94ecc45a7e65915a1d83ecfd9832435]
+@startuml File Gateway
+left to right direction
+
+node "Application Server" as app
+boundary "Storage Gateway" as gateway
+node {
+  rectangle "Direct Connect" as dc
+  rectangle "Internet" as internet
+  rectangle "Amazon VPC" as vpc
+}
+cloud AWS {
+  frame "S3" {
+    file "S3" as s3
+    file "S3-IA" as s3ia
+    file "Glacier" as glacier
+  }
+
+
+  s3 - - s3ia
+  s3ia - - glacier
+}
+
+app - - gateway: NFS
+gateway - - dc
+gateway - - internet
+gateway - - vpc
+dc - - s3
+internet - - s3
+vpc - - s3
+
+@enduml
+
+PlantUML version 1.2020.10(Sun May 17 05:35:57 EDT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_221-b11
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>
