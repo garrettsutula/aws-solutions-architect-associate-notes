@@ -57,7 +57,7 @@ Maximum 5 IPv4 CIDR blocks per VPC
 Maximum 1 IPv6 CIDR blocks per VPC
 
 When creating a new VPC, default a route table, Network ACL and Security Group will be set up automatically, like this:
-![new-vpc](img/new-vpc.png)
+![new-vpc](../img/new-vpc.png)
 
 No subnets or internet gateways are created by default.
 
@@ -151,7 +151,7 @@ A special purpose computer on a network designed to withstand attacks typically 
 ### Direct Connect
 Direct Connect is a cloud service solution that lets you establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between a physical site & AWS which can reduce network costs, increase bandwidth throughput, and provide a more consistent network experience than internet-based connections.
 
-![direct-connect](img/direct-connect.png)
+![direct-connect](../img/direct-connect.png)
 
 - Direct Connect directly connects your datacenter to AWS
 - Useful for high throughput workloads

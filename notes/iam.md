@@ -17,7 +17,7 @@ Always set up Multi-factor Authentication (MFA) on the root account. You can cre
 ## Building Organizations
 An account management service that enables you to consolidate multiple aws accounts into an organization that's centrally managed.
 
-![aws org sample](./img/Organizations.svg)
+![aws org sample](../img/Organizations.svg)
 
 Accounts organized into Organizational Units (OUs), pretty standard directory management.
 

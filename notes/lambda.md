@@ -8,10 +8,10 @@ Execution can be multi-threaded.
 Commonly used for:
 - Event-driven applications
 
-![lambda-event](img/Event-driven%20Application.svg)
+![lambda-event](../img/Event-driven%20Application.svg)
 - HTTP request handlers
 
-![lambda-request](img/Request-driven%20Application.svg)
+![lambda-request](../img/Request-driven%20Application.svg)
 
 Lambda execution is instanced and isolated for each event/request. Lambda functions can trigger other lambda functions to orchestrate functionality.
 

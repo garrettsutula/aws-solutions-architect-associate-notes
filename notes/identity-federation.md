@@ -18,7 +18,7 @@ User Pools are user directories to manage sign-up and sign-in functionality for 
 
 Identity Pools provide temporary AWS credentials to access AWS services like S3 or DynamoDB, the actual store for temporary AWS credentials.
 
-![cognito](img/Cognito%20Authentication.svg)
+![cognito](../img/Cognito%20Authentication.svg)
 
 Cognito tracks the association between user identity and the devices they use. In order to provide a seamless user experience, Cognito uses SNS to synchronize user data across multiple devices. Whenever data in the cloud changes, SNS sends a notification to all devices.
 
