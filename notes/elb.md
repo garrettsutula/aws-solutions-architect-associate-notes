@@ -1,8 +1,6 @@
 # Elastic Load Balancer (ELB)
 [ELB FAQ](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html)
 
-Never have a pre-defined IPv4 addrress, you resolve to them with a DNS name.
-
 You need at least two public subnets to create a internet-facing load balancer.
 
 `504 - Gateway Timeout` means the application behind the load balancer is not responding within the timeout period.
@@ -18,14 +16,19 @@ There are three types of load balancers in AWS:
 ### Application Load Balancers
 Best suited for HTTP/HTTPS, operate at Layer 7 and are application-aware. Intelligent, can handle advanced request routing, sending specified requests to specific web servers.
 
+Never have a pre-defined IPv4 addrress, you resolve to them with a DNS name.
 
 ### Network Load Balancers
 Best suited for TCP traffic where extreme performance is required. Operates at L4, can handle millions of requests per second at very low latency.
+
+Network Load Balancers have static IP addresses and do not **have** to be accessed via DNS resolution.
 
 ### Classic Load Balancers
 Legacy Elastic Load Balancers. Operates at Layer 4 with some Layer 7 features such as `X-Forwarded-For` and sticky sessions. HTTP/HTTPS or strict Layer 4 mode for TCP.
 
 A bit cheaper than ALBs, good for very basic load balancing.
+
+Never have a pre-defined IPv4 addrress, you resolve to them with a DNS name.
 
 ## Load Balancer Features
 
@@ -40,4 +43,5 @@ When provisioning a load balancer you pick the availability zones where it'll ru
 ### Path Patterns
 Load balancer forwards requests based on the URL path, and route requests to different target groups. Useful for microservices architecture.
 
-
+### Server Name Identification (SNI)
+A TLS extension that allows ELBs to provide TLS certificates that match the domain names for which they are configured.

@@ -16,6 +16,7 @@ Amazon's DNS service. Up to 50 domain names can be managed in Route53 by default
   - Default number of seconds for the TTL on resource records
 - Name Server Records (NS Records) used by the Top Level Domain servers to direct traffic to the Content DNS server which contains the authoritative DNS records for a given domain
 - "A" records are the fundamental type of DNS record. The "A" in A record stands for "Address". The A record is used to translate the name of a domain to an ip address.
+- "AAAA" records are the same as "A" records but for ipv6.
 - A Canonical Name (CName) record can be used to resolve one domain name to another.
 - Alias records are used to map resource record sets in your hosted zone to Elastic Load Balancers, Cloudfront distributions or S3 buckets that are configured as websites.
   - Alias records can redirect to the root of a domain name (also known as a zone apex record), e.g. `yahoo.com` and CNAME records cannot.

@@ -3,7 +3,7 @@
 ## Relational Database (RDS)
 [RDS FAQ](https://aws.amazon.com/rds/faqs/)
 
-`RDS` runs on virtual machines but you cannot log in to these operating systems. Patching is Amazon's responsibility. RDBMS are useful for Online Transaction Processing (OLTP).
+`RDS` runs on virtual machines but you cannot log in to these operating systems. Patching is Amazon's responsibility. RDSes are useful for Online Transaction Processing (OLTP).
 
 `RDS` has two key features:
 - Multi-AZ - For disaster recovery, has automatic failover
@@ -13,6 +13,7 @@ AWS offers the following relational databases on `RDS`:
 - Microsoft SQL Server
 - Oracle
 - MySQL Server
+  - InnoDB storage engine recommended
 - PostgreSQL
 - Aurora
   - Has a "Serverless" offering
@@ -29,6 +30,8 @@ Anytime backups are restored, the restored version of the database will be a new
 Allow recovery to any point-in-time during the retention period, down to a second. Stores a full daily snapshot plus transaction logs for each day. Backup data is stored in S3, you get free storage space equal to the size of your database. 
 
 Backups are taken within a defined window, during the window storage I/O may be suspended while your data is being backed up and you may experience increase latency.
+
+Up to 35 days of backups can be kept, default is 7 days.
 
 #### Snapshot Backups
 Done manually (user-initiated). Stored even after the original RDS instance is deleted, unlike automated backups.
@@ -71,6 +74,14 @@ Three types of replicas:
 - Backups do not impact database performance.
 - You can share Aurora Snapshots with other AWS accounts.
 
+#### Monitoring
+From the console, the following metrics are monitored:
+- Number of Connections
+- Number of Read & Write Operations
+- Amount of storage used
+- Amount of memory and CPU used
+- Amount of network traffic to and from the instance
+
 #### Amazon Aurora Serverless
 On-demand auto-scaling configuration for Aurora. Automatically starts up, shuts down and scales based on your application's needs.
 
@@ -110,9 +121,13 @@ Amazon has a couple different non-relational database options:
 Fast & flexible NoSQL database service, consistent single-digit millisecond latency at any scale. Fully managed database, supports both `document` and `key-value` data models.
 
 - Stored on SSD storage
+- Read and Write capacity can be on-demand or provisioned, can be increased but costs more.
 - Spread across 3 geographically distinct data centers
-- Supports both Eventually Consistent Reads (Default) and Strongly Consistent Reads
+- Supports both Eventually Consistent Reads (Default), Strongly Consistent Reads and ACID Transactions
+  - Strongly-consistent reads cost more!
+  - ACID Transactions cost the most!
 
+400KB size limit on objects stored in DynamoDB
 
 ## Amazon Redshift
 `Amazon RedShift`, Data Warehouse solution for Online Analytics Processing (OLAP) and Business Intelligence.
@@ -169,3 +184,12 @@ Supports two open-source in-memory caching engines:
 |Persistence|No|Yes|
 |Multi-AZ|No|Yes|
 |Backup & Restore Capabilities|No|Yes|
+
+## Data Migration Service (DMS)
+Can perform one-time migrations or continuous replication between relational databases, data warehouses, NoSQL database and other types of data stores (such as S3). Can work with AWS Schema Conversion Tool (SCT) to change schemas to the new platform.
+
+## Neptune
+AWS' Graph Database, useful for storing and querying highly connected datasets
+
+## Elastic MapReduce (EMR)
+Big Data Platform for processing very large amounts of data using Apache Spark, Apache HBase, Apache Hive, Apache Hudi, and Presto

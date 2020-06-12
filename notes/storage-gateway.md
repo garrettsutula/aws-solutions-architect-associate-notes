@@ -14,6 +14,8 @@ Files are stored in S3 buckets, accessed through a network file system (NFS) mou
 
 Files stored this way can take advantage of all the benefits of S3 such as versioning, lifecycle management, and cross-region replication.
 
+The most recently-accessed data is cached on the gateway for faster access times.
+
 ## Volume Gateway
 Provides applications with disk volumes using the iSCSI block protocol.
 
@@ -32,5 +34,7 @@ Only the most frequently-used data is stored locally, which minimizes the need t
 ## Tape Gateway
 ![tape gateway](../img/Tape%20Gateway.svg)
 Offers durable, cost-effective data archival solution in the AWS Cloud. VTL interface lets you use your existing tape-based backup application infrastructure to store data on virtual tape cartridges that you create on your tape gateway.
+
+Archived tapes are stored in S3 Glacier or S3 Glacier Deep Archive
 
 Supported by NetBackup, Backup Exec, Veeam, etc.

@@ -4,7 +4,7 @@
 Virtual, cloud-based persistent block storage with different service tiers based on application needs.
 ## Volume Types
 - General Purpose SSD
-- Provisioned IOPS SSD
+- Provisioned IOPS SSD - maximum `50 x GiB` IOPS, e.g. 10GiB has a max of 500 IOPS
 - Throughout Optimized HDD
 - Cold HDD
 - Magnetic

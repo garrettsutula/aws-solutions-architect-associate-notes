@@ -27,6 +27,8 @@ Good for:
 2. **Convertible Reserved Instances**- up to 54% off, on-demand capability to change the attributes of the RI as long as the exchange results in equal or greater value (cost).
 3. **Scheduled Reserved Instances** - reserve specific time windows, allows you to match capacity with a predictable schedule whether it's a part of a day, week or month.
 
+Instance type, scope, tenancy and hardware platform determine the cost of a reserved instance.
+
 ### Spot Pricing
 Good for: 
 - Applications that are only feasible at very low compute prices
@@ -38,7 +40,7 @@ Amazon will terminate instances if demand for higher-priced tiers increases. If 
 ### Dedicated Host Pricing
 Good for:
 - Licensing that doesn't support multi-tenancy or cloud deployments.
-- Any requirement (e.g. regulator) that may not support multi-tenant virtualization.
+- Any requirement (e.g. regulatory) that may not support multi-tenant virtualization.
 
 Can be purchased On-Demand or Reserved for a discount (70% vs 75%).
 
@@ -72,7 +74,7 @@ Security Groups are basically virtual firewalls that control how EC2 instance in
 
 Inbound/Outbound rule changes take place **immediately**. Rules are *stateful* and whitelist only, connections that are allowed inbond are also allowed outbound. VPC Network Access Control Lists (NACLs) are *stateless* and allow control over one-way firewall rules and blacklisting.
 
-Security Groups block traffic by default following the least-privlidege principle (whitelisting).
+Security Groups block traffic by default following the least-privilege principle (whitelisting).
 
 ### AMIs (images)
 The AMI used for an EC2 instance can be selected by:
@@ -140,7 +142,7 @@ A network device that you can attach to your Amazon EC2 instance to accelerate H
 
 EFA provides lower and more consistent latency, higher throughput than the TCP transport traditionally used in cloud-based HPC systems.
 
-EFA can use OS-bypass. OS-bypass enables HPC and machine learning applications to bypass the operating system kernel and to communicate directly with the EFA device. It makes it a **lot** faster with a **lot* lower latency. Not supported on Windows currently, only Linux.
+EFA can use OS-bypass. OS-bypass enables HPC and machine learning applications to bypass the operating system kernel and to communicate directly with the EFA device. It makes it a **lot** faster with a **lot** lower latency. Not supported on Windows currently, only Linux.
 
 >Note: In any exam scenario question that mentions HPC or ML that asks what network adapter you want, choose EFA.
 
@@ -172,6 +174,8 @@ Grouping of EC2 instances within a single availability zone.
 When to use: applications that need low network latency, high network throughput or both. Improved performance.
 
 Only certain instances can be launched into a Clustered Placement Group. A clustered placement cannot span multiple availability zones. AWS recommends homonogenous instances within Clustered Placement Groups.
+
+If you get capcity errors, try stopping and restarting all instances to get them running on dedicated hardware with sufficient capacity.
 
 #### Spread Placement Groups
 Opposite to a Clustered Placement Group, a group of instances that are each placed on separate hardware. Improved durability.

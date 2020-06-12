@@ -1,5 +1,6 @@
 # Auto-Scaling (EC2 & AWS)
 [EC2 Auto-Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
+Auto-Scaling configurations typically span multiple availability zones to maintain high availability.
 
 EC2 Autoscaling has 3 components:
 1. Groups - Logical component. A webserver group, application group, database group, etc.
@@ -31,3 +32,11 @@ Most popular type of scaling. Allows you to define policies that control the sca
 Using AWS Auto-Scaling (different than EC2 Auto-Scaling) to scale resources across multiple services. Combines predictive and dynamtic scaling (proactive and reactive) to scale your Amazon EC2 capacity faster.
 
 [AWS Autoscaling FAQ](https://aws.amazon.com/autoscaling/faqs/)
+
+## Attaching An Existing Instance to an Autoscaling Group
+To attach an existing instance to an autoscaling group it must meet the following criteria:
+- The instance is in the running state.
+- The AMI used to launch the instance must still exist.
+- The instance is not a member of another Auto Scaling group.
+- The instance is launched into one of the Availability Zones defined in your Auto Scaling group.
+- If the Auto Scaling group has an attached load balancer, the instance and the load balancer must both be in EC2-Classic or the same VPC. If the Auto Scaling group has an attached target group, the instance and the load balancer must both be in the same VPC.

@@ -1,7 +1,7 @@
 # CloudWatch
 [CloudWatch FAQ](https://aws.amazon.com/cloudwatch/faqs/)
 
-Cloudwatch is a moonitoring sevice to monitor your AWS resources as well as the applications you run on AWS. Cloudwatch is all about performance monitoring and metrics.
+Cloudwatch is a monitoring sevice to monitor your AWS resources as well as the applications you run on AWS. Cloudwatch is all about performance monitoring and metrics.
 
 Cloudwatch can monitor things like:
 - Storage & Content Delivery

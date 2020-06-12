@@ -50,6 +50,10 @@ What can be done with a VPC?
 - You can peer VPCs with other AWS accounts as well as other VPCs in the same account.
 - You can peer between regions
 - VPC peering is always direct between two VPCs, e.g. `A <-> B`, with a `A <-> B <-> C` configuration `A` & `C` can only talk to `B`, but `B` can talk to `A` & `C`
+- IP addresses in VPCs cannot overlap
+
+## AWS Transit Gateway
+AWS Transit Gateway connects VPCs and on-premises networks through a central hub. This simplifies your network and puts an end to complex peering relationships. It acts as a cloud router – each new connection is only made once.
 
 ## Creating a VPC
 Maximum 5 VPCs per Region

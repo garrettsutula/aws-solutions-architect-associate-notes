@@ -14,3 +14,7 @@ Objects are cached with a TTL on the edge locations. Edge locations are not just
 Two types of distribution:
 - Web Distribution
 - RTMP - Real Time Messaging Protocol. Used for media streaming.
+
+Setting up an Origin Access Identity (`OAI`) will allow you to restrict access of content in an S3 bucket only to CloudFront, preventing users from accessing S3 publically.
+
+This is **complimentary** to signed URLs and signed cookies, if `OAI` isn't configured then users can get around the configured Cloudfront security mechanisms.

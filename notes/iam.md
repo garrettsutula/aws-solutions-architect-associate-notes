@@ -6,6 +6,7 @@ Allows for the management of:
 - Groups
 - Roles
 - Policies
+- Certificates
 for accessing AWS services and resources.
 
 IAM is *universal* and does not apply to regions at this time. The *root account* is the account created when first setting up AWS and has complete administrator access. It's not a good idea to use this account and instead you should create one or more user accounts that have the Roles necessary to use AWS.
@@ -24,3 +25,31 @@ Accounts organized into Organizational Units (OUs), pretty standard directory ma
 Policies are applied at the OU or Account level.
 
 "Paying" account is indepdendent of linked accounts, linked accounts own and manage their resources in AWS. Consolidates billing to one account, volume pricing discount benefits.
+
+## Policy Example
+
+```
+{
+ "Version":"2012-10-17",
+ "Statement":[
+  {
+   "Sid":"DirectoryTutorialsDojo1234",
+   "Effect":"Allow",
+   "Action":[
+    "ds:*"
+   ],
+   "Resource":"arn:aws:ds:us-east-1:987654321012:directory/d-1234567890"
+  },
+  {
+   "Effect":"Allow",
+   "Action":[
+   "ec2:*"
+   ],
+   "Resource":"*"
+  }
+ ]
+}
+```
+In this policy, AWS Directory Service (`ds`) calls are allowed as long as the resource contains the directory id `d-1234567890` and all Elastic Cloud Compute (`ec2`) calls are allowed on any EC2 resource or subresource.
+
+The `Principal` isn't set on IAM policies, when policies are attached to users (via roles), the `Principal` is implied.

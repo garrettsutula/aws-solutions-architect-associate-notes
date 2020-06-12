@@ -3,7 +3,7 @@
 
 Serverless compute service where you can upload your code and create Lambda functions. Lambda takes care of provisioning and managing the servers that are used to run the code. You don't have to worry about patching, scaling, etc.
 
-Execution can be multi-threaded.
+Execution can be multi-threaded. Maximum runtime is 15 minutes.
 
 Commonly used for:
 - Event-driven applications
@@ -48,3 +48,9 @@ Triggers:
 - SNS
 - SQS
 - Partner event sources 
+
+Lambdas can connect to VPCs in AWS, including multiple VPCs via the `VpcConfig` parameter. Lambdas need to set up elastic network interfaces & need permission to create, describe and delete these.
+
+Up to five dependency layers can be specified in the function configuration.
+
+The zipped deployment package must be under `250MB`
